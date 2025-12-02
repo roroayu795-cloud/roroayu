@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusanaAyu_Store</title>
+  
+
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: url("mpl/image/bacground\ mpl.png") no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #444;
+      scroll-behavior: smooth;
+    }
+
+    /* header logo di tengah */
+    header {
+       padding: 15px 0;
+       text-align: center;
+      top: 0;
+      z-index: 1000;
+      
+    }
+    
+    .logo img {
+      width: 160px;
+      height: auto;
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .info h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .info p {
+            margin: 0;
+            color: #999;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #e91e63; /* Pink cerah */
+            font-weight: bold;
+        }
+        .hero {
+            padding: 50px 40px;
+        }
+        .hero h2 {
+            font-size: 40px;
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            max-width: 600px;
+            line-height: 1.5;
+            color: #555;
+        }
+    .h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .info p {
+            margin: 0;
+            color: #999;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #e91e63; /* Pink cerah */
+            font-weight: bold;
+        }
+        .hero {
+            padding: 50px 40px;
+        }
+        .hero h2 {
+            font-size: 40px;
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            max-width: 600px;
+            line-height: 1.5;
+            color: #555;
+        }
+         nav {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #6a4c93;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff5d8f;
+    }
+
+    /* keranjang */
+    .cart {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      border-radius: 15px;
+      padding: 10px 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      font-size: 16px;
+      color: #6a4c93;
+    }
+
+    .rotating-text {
+      width: 100%;
+      margin: 10px auto;
+      padding: 8px 20px;
+      background: rgba(255, 192, 203, 0.6);
+      border-radius: 25px;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 18px;
+      color: #6d597a;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .rotating-text span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 25s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+      background: rgba(250, 248, 248, 0.137);
+      margin: 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #6a4c93;
+      margin-bottom: 30px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 28px;
+    }
+
+    .products, .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fdfbfb;
+      border-radius: 20px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      border: none;
+      background: #b16e1d;
+      color: rgb(247, 244, 244);
+      border-radius: 20px;
+      cursor: pointer;
+      
+    }
+
+    .card button:hover {
+      background: #e0b54a;
+    }
+
+    footer {
+      background-color: #e9bea5;
+      padding: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: #040441;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .footer-left {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer-right {
+        flex: 2;
+        min-width: 250px;
+        text-align:left ;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header + logo di tengah -->
+  <header>
+    <div class="logo">
+      <img src="https://i.pinimg.com/1200x/1c/cf/ee/1ccfeeb6416b993c04af9a02bf184321.jpg" alt="logo web">
+    </div>
+    <nav>
+      <ul>
+      <a href="#home">Home</a></li>
+      <a href="#produk">Produk</a></li>
+      <a href="#contact">Contact</a></li>
+      
+    
+    </nav>
+    <main class="hero">
+    <h2>Temukan gayamu ✨</h2>
+    <p>Selamat datang di Busana Ayu 👋🏻 
+      ruang di mana keanggunan tradisi dipadukan dengan sentuhan modern yang memukau.
+      Setiap koleksi kebaya kami dirancang untuk menonjolkan pesona terbaikmu: lembut, anggun, namun tetap berkelas.Pilihlah kebaya impianmu dan rasakan bagaimana setiap detail menghadirkan nuansa kemewahan yang membuatmu tampil semakin percaya diri di setiap acara spesial.
+      🌺 Keanggunan bukan hanya gaya—namun cara untuk bersinar.
+      Kebaya cantik, gaya elegan. Temukan look terbaikmu hanya di Toko Kebaya!😉</p>
+</main>
+  </header>
+
+  <!-- Cart -->
+  <div class="cart" id="cart">🛒 Keranjang (0) - Rp0</div>
+
+  
+
+  <!-- Limited Edition -->
+  <section id="produk">
+    <h2>👗 Kebaya Edition 👗</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/5b/17/3a/5b173a158b06d9b2bb833306dd077c9f.jpg" alt="Kebaya couple">
+        <h3>Kebaya Couple</h3>
+        <p>Rp.500.000 - Rp.700.000</p>
+        <button onclick="addToCart('couple 1',800000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/66/50/61/6650619ef564c4a2c8ca7fe87c6c933b.jpg" alt="Kebaya Modern">
+        <h3>Kebaya Modern</h3>
+        <p>Rp.250.000 - Rp.500.000</p>
+        <button onclick="addToCart('Kebaya Modern',500000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/a3/1c/fa/a31cfa6628fa170c402c677de3a2a7ec.jpg" alt="Kebaya Janggan">
+        <h3>Kebaya Janggan</h3>
+        <p>Rp.300.000 - Rp.700.000</p>
+        <button onclick="addToCart('Kebaya Janggan',700000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/21/1c/e6/211ce6269e4a5294cc798e91cd557e7e.jpg" alt="Kebaya Anak">
+        <h3>Kebaya Anak</h3>
+        <p>Rp.200.000 - Rp.350.000</p>
+        <button onclick="addToCart('Kebaya Anak',700000)">Tambah ke Keranjang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Koleksi -->
+  <section>
+    <h2>🌟Aneka Kebaya🌟</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/cf/1c/d2/cf1cd2096864664defd3cda621e19826.jpg" alt="Kebaya Couple 1">
+        <h3>Kebaya Couple 1</h3>
+        <p>Rp.500.000</p>
+        <button onclick="addToCart('kebaya couple 1',400000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/79/04/ce/7904cea85a37d5eab78880776c6dc2e0.jpg" alt="Kebaya couple 2">
+        <h3>Kebaya Couple 2</h3>
+        <p>Rp.550.0000</p>
+        <button onclick="addToCart('kebaya couple 2',300000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/a0/6b/8c/a06b8c88f99adc6268f7caa11597a6f8.jpg" alt="Kebaya couple 3">
+        <h3>Kebaya Couple 3</h3>
+        <p>Rp.600.000</p>
+        <button onclick="addToCart('Kebaya Couple 3',600000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/6e/49/61/6e4961cec316d7e288cc4706d350bb3a.jpg" alt="Kebaya janggan 1">
+        <h3>Kebaya Janggan 1</h3>
+        <p>Rp.200.000</p>
+        <button onclick="addToCart('Kebaya janggan 1',200000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/8c/05/dd/8c05dd9b817812c520ba07d4795bfd56.jpg" alt="kebaya janggan 2">
+        <h3>Kebaya Janggan 2</h3>
+        <p>Rp.300.000</p>
+        <button onclick="addToCart('Kebaya Janggan 2',300000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/d9/60/f2/d960f2609f920d043538f29f81f9df40.jpg" alt="Kebya Janggan 3">
+        <h3>Kebaya Janggan 3</h3>
+        <p>Rp.400.000</p>
+        <button onclick="addToCart('Kebaya Janggan 3',200000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/8b/57/1c/8b571cc0571e307cc6bea59f354c6262.jpg" alt="Kebaya Modern 1">
+        <h3>Kebaya Modern 1</h3>
+        <p>Rp.200.000</p>
+        <button onclick="addToCart('Kebaya Modern 1',200000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/e8/ec/00/e8ec00a3d87bfd4814dfb39faf44fd52.jpg" alt="Kebaya Modern 2">
+        <h3>Kebaya Modern 2</h3>
+        <p>Rp.400.000</p>
+        <button onclick="addToCart('Kebaya Modern 2',400000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/14/d8/a6/14d8a6d0bc99877acc3525e4fbc1d37d.jpg" alt="Kebaya Modern 3">
+        <h3>Kebaya Modern 3</h3>
+        <p>Rp.300.000</p>
+        <button onclick="addToCart('Flatshoes Sporty',300000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/0e/5c/2f/0e5c2f2e4df135e79bc09b6ab7a5ff3d.jpg" alt="Kebaya Anak 1">
+        <h3>Kebaya Anak 1</h3>
+        <p>Rp.400.000</p>
+        <button onclick="addToCart('Flatshoes Nude',400000)">Tambah ke Keranjang</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/24/7d/08/247d083b418c7506dcd836617c6a4ceb.jpg" alt="Kebaya Anak 2">
+        <h3>Kebaya Anak 2</h3>
+        <p>Rp.200.000</p>
+        <button onclick="addToCart('Flatshoes Luxury',200000)">Tambah ke Keranjang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>© 2025 ra_busanaayu Gallery Busana <br> All Rights Reserved</p>
+      </div>
+      <div class="footer-right">
+        <p>
+          📍 Alamat: Jl. Laksda Adisucipto No.26, Demangan, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55221 <br>
+          📧 Email: <a href="mailto:ra_busanaayu@gmail.com">ra_busanaayu@gmail.com</a> <br>
+          📱 WhatsApp: <a href="https://wa.me/62 857-1410-2033" target="_blank">+62 62 857-1410-2033</a> <br>
+          📸 Instagram: <a href="https://instagram.com/Busanaayu_store" target="_blank">@Busanaayu_store</a> <br>
+          ▶ YouTube: <a href="https://youtube.com/@Busanaayu_Store" target="_blank">busanaayu Official</a> <br>
+          👍 Facebook: <a href="https://facebook.com/Busanaayu_store" target="_blank">busanaayu_Store</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script keranjang -->
+  <script>
+    let cart = [];
+    function addToCart(name, price) {
+      cart.push({name, price});
+      updateCart();
+    }
+    
+
+  </script>
+
+</body>
+</html>
