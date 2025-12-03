@@ -4,6 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BusanaAyu_Store</title>
+
+   <link rel="icon" type="https://i.pinimg.com/1200x/10/99/a7/1099a77ced42760595f56fa38a8fca7f.jpg" href="https://i.pinimg.com/1200x/10/99/a7/1099a77ced42760595f56fa38a8fca7f.jpg">
+
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fff0f6;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #a3d7ff, #c8f0fb);
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .jumbotron-text {
+      font-size: 15px;
+    }
+    header img {
+      width: 50px;
+      margin-right: 15px;
+    }
+    nav {
+      background: #b8c8c800;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffe4ec;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      width: 1000px;
+    }
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    /* Kotak Produk */
+    .produk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .produk-card {
+      background: #fff;
+      border-radius: 10px;
+      border: 2px solid #ffc1e3;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .produk-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .produk-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .produk-card h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+      color: #d81b60;
+    }
+    .produk-card p {
+      font-weight: bold;
+      color: #ad1457;
+      margin: 0;
+    }
+
+    footer {
+      background: #bfe5f5;
+      color: white;
+      text-align: none;
+      padding: 15px;
+      margin-top: 20px;
+      font-size: 14px;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
   
 
   
@@ -18,7 +121,7 @@
       background-size: cover;
       margin: 0;
       padding: 0;
-      color: #444;
+      color: #ff0404;
       scroll-behavior: smooth;
     }
 
@@ -73,7 +176,7 @@
         }
         .info p {
             margin: 0;
-            text-align: center;
+            text-align: none ;
             color: #999;
         }
         nav a {
@@ -88,15 +191,15 @@
         }
         .hero h2 {
             font-size: 40px;
-            color: #e91e63;
-            text-align: left;
+            color: #1e39e9;
+            text-align: none;
             margin-bottom: 10px;
         }
         .hero p {
             max-width: 600px;
             text-align: center;
             line-height: 1.5;
-            color: #555;
+            color: #1a075d;
         }
          nav {
       margin-top: 10px;
@@ -113,7 +216,8 @@
     }
 
     nav a:hover {
-      color: #ff5d8f;
+      color: #4104ab;
+      background: #fff;
     }
 
     /* keranjang */
@@ -139,7 +243,7 @@
       white-space: nowrap;
       overflow: hidden;
       font-size: 18px;
-      color: #6d597a;
+      color: #9706f8;
       font-style: italic;
       font-weight: bold;
     }
@@ -257,7 +361,7 @@
     
     </nav>
     <main class="hero">
-    <h2>Temukan gayamu ✨</h2>
+    <h2>Temukan Seleramu✨</h2>
     <p>Selamat datang di Busana Ayu 👋🏻 
       ruang di mana keanggunan tradisi dipadukan dengan sentuhan modern yang memukau. Setiap koleksi kebaya kami dirancang untuk menonjolkan pesona terbaikmu: lembut, anggun, namun tetap berkelas.Pilihlah kebaya impianmu dan rasakan bagaimana setiap detail menghadirkan nuansa kemewahan yang membuatmu tampil semakin percaya diri di setiap acara spesial.🌺 Keanggunan bukan hanya gaya—namun cara untuk bersinar. Kebaya cantik, gaya elegan.Temukan look terbaikmu hanya di Toko Kebaya!😉</p>
 </main>
@@ -269,6 +373,12 @@
   
 
   <!-- Limited Edition -->
+   <section>
+    <marquee behavior="scroll" direction="left" scrollamount="6"> 📢📢  DISKON SPESIAL AKHIR TAHUN! Dapatkan diskon 20% untuk semua Kebaya Brokat Premium. ꦱꦼꦭꦩꦠ꧀ꦧꦼꦂꦧꦼꦭꦚ꧀ꦗ
+      
+    </marquee>
+    <p>💖 Kebaya Premium, Harga Terjangkau! Rayakan momen istimewamu dengan koleksi berbahan Brokat Halus dan Katun Jepang. Diskon 20% menantimu!</p>
+   </section>
   <section id="produk">
     <h2>👗 Kebaya Edition 👗</h2>
     <div class="products">
